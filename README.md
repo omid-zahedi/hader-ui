@@ -15,7 +15,7 @@
 ## نحوه استفاده
 1. ریپوزیتوری را کلون کنید یا فایل‌های آن را دانلود کنید:
    ```bash
-   git clone https://github.com/username/repository-name.git
+   git clone https://github.com/omid-zahedi/hader-ui
    ```
 2. فایل `index.html` را در مرورگر باز کنید تا پروژه اجرا شود.
 
