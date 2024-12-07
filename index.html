@@ -40,7 +40,7 @@
         }
 
         nav {
-            background-color: #1e1e2f;
+            background-color: hsla(222, 47%, 11%, 1);
         }
 
         nav ul {
@@ -101,15 +101,15 @@
 
         @media (max-width: 768px) {
             .toggle-arrow {
-        font-size: 15px;
-        cursor: pointer;
-        margin-left: 5px;
-        border: 2px solid hsl(199deg 100% 50%);
-        padding: 0px 2px;
-        border-radius: 5px;
-        width: 20px;
-        display: flex;
-        justify-content: center;
+                font-size: 15px;
+                cursor: pointer;
+                margin-left: 5px;
+                border: 2px solid hsl(199deg 100% 50%);
+                padding: 0px 2px;
+                border-radius: 10px;
+                width: 20px;
+                display: flex;
+                justify-content: center;
             }
 
             .menu-item.open .submenu {
@@ -179,6 +179,12 @@
                 display: none;
             }
         }
+
+        .menu-item.has-submenu .submenu {
+            border-radius: 0 0 10px 10px; 
+            overflow: hidden; 
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
@@ -227,13 +233,11 @@
             const nav = document.querySelector('nav');
             nav.classList.toggle('active');
         }
-
         function toggleSubmenu(event) {
-            event.stopPropagation();
+            event.preventDefault(); 
             const menuItem = event.target.closest('.menu-item');
             menuItem.classList.toggle('open');
         }
-
         document.addEventListener('click', function (e) {
             const nav = document.querySelector('nav');
             const toggleButton = document.querySelector('.menu-toggle');
@@ -243,10 +247,5 @@
             }
         });
     </script>
-
-
-
-
-
 </body>
 </html>
